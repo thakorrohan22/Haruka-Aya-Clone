@@ -1,20 +1,18 @@
-# Haruka
-A modular Telegram Python bot running on python3 with an sqlalchemy database.
+# MenheraChanRoBot
 
-Can be found on telegram as [Haruka Aya](https://t.me/HarukaAyaBot).
 
-Alternatively, [find me on telegram](https://t.me/peaktogoo)! (Keep all support questions in the support chat, where more people can help you.)
 
-You can also join our support group [here!](https://t.me/HarukaAyaBot)
+A modular telegram Python bot running on python3 with an sqlalchemy database.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+Originally a simple group management bot with multiple admin features, it has evolved, becoming extremely modular and 
+simple to use.
 
-## Thanks to
+Can be found on telegram as [Menhera](https://t.me/menherachanRobot).
 
-* MrYacha - For pYanaBot :3
-* Skittle - for memes and sticker stuff
-* 1mavarick1 - gmutes, etc 
-* AyraHikari - weather
-* Paul Larsen - marie creator, inspiration to do many things
-* FFBot - for translations functions
-And much more that we couldn't list it here!
+Marie and I are moderating a [support group](https://t.me/MenherachanSupport), where you can ask for help setting up your
+bot, discover/request new features, report bugs, and stay in the loop whenever a new update is available. Of course
+I'll also help when a database schema changes, and some table column needs to be modified/added. Note to maintainers that all schema changes will be found in the commit messages, and its their responsibility to read any new commits.
+
+Join the [Tech channel](https://t.me/Dark_Hacker_X) For Free Knowledge.
+
+Alternatively, [find me on telegram](https://t.me/TheDarkW3b)! (Keep all support questions in the support chat, where more people can help you.)
