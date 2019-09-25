@@ -101,7 +101,7 @@ def new_member(bot: Bot, update: Update):
                     "I have been added to {} with ID: <pre>{}</pre>".format(chat.title, chat.id),
                     parse_mode=ParseMode.HTML
                 )
-                bot.send_message(chat.id, "I'm joined 😎, Please send some tities! 😋😍")
+                bot.send_message(chat.id, "Thanks To Add,Give Some Commands Now 😃")
 
             else:
                 # If welcome message is media, send with appropriate function
@@ -211,7 +211,7 @@ def left_member(bot: Bot, update: Update):
 
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
-                update.effective_message.reply_text("RIP Master")
+                update.effective_message.reply_text("Its My Master")
                 return
 
             # if media goodbye, use appropriate function for it
