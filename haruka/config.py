@@ -11,8 +11,8 @@ class Config(object):
 
     # REQUIRED
     API_KEY = ""
-    OWNER_ID = "834556273"  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = "HopSins"
+    OWNER_ID = "686021814"  # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_USERNAME = "TheDarkW3b"
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = ''  # needed for any database modules
@@ -20,7 +20,7 @@ class Config(object):
     LOAD = []
     NO_LOAD = ['translation', 'sed']
     WEBHOOK = ANYTHING
-    URL = "https://johnnysinsbot.herokuapp.com/"
+    URL = "https://menherachanrobot.herokuapp.com/"
 
     # OPTIONAL
     SUDO_USERS = []  # List of id's (not usernames) for users which have sudo access to the bot.
@@ -32,7 +32,7 @@ class Config(object):
     DEL_CMDS = True  # Whether or not you should delete "blue text must click" commands
     STRICT_ANTISPAM = True
     WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
-    BAN_STICKER = 'CAADBQADDQADjR\_yKCDDBtuwTt59Ag'  # banhammer marie sticker
+    BAN_STICKER = 'CAADBQADfgADttzjKJWTC3CM9l78FgQ'  # banhammer marie sticker
     STRICT_GBAN = True
     STRICT_GMUTE = True
     ALLOW_EXCL = True  # Allow ! commands as well as /
