@@ -1,6 +1,6 @@
 {
-  "name": "Menhera",
-  "description": "Telegram's sassiest group manager. Modular Telegram group management bot!",
+  "name": "MenheraChan",
+  "description": "Telegram's Best group manager. Modular Telegram group management bot!",
   "keywords": [
     "telegram",
     "best",
@@ -8,7 +8,7 @@
     "manager",
     "3"
   ],
-  "repository": "https://github.com/TheDarkW3b/xyzjs",
+  "repository": "https://github.com/ramitgangwar/husg28882hsh",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable env variables",
