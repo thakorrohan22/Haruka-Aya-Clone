@@ -44,7 +44,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
             raise
 
     if user_id == bot.id:
-        message.reply_text(tld(chat.id, "You’re strong. When i put my penis in your anus, its Sounds like miracle. 😒"))
+        message.reply_text(tld(chat.id, "I'm not gonna BAN myself, are you crazy?"))
         return ""
 
     if is_user_ban_protected(chat, user_id, member):
@@ -63,7 +63,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
 
     try:
         chat.kick_member(user_id)
-        bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
+        bot.send_sticker(chat.id, BAN_STICKER)  # Menhera Chan Ban sticker
         message.reply_text(tld(chat.id, "Banned!"))
         return log
 
@@ -259,7 +259,7 @@ def banme(bot: Bot, update: Update):
 
     res = update.effective_chat.kick_member(user_id)  
     if res:
-        update.effective_message.reply_text("Insect get lost. 😏")
+        update.effective_message.reply_text("Kids get lost. 😏")
         log = "<b>{}:</b>" \
               "\n#BANME" \
               "\n<b>User:</b> {}" \
