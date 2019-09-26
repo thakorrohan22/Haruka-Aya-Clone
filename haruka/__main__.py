@@ -402,9 +402,11 @@ def get_help(bot: Bot, update: Update):
         send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text=tld(chat.id, "Back"), callback_data="help_back")]]))
 
     else:
-        send_help(chat.id, tld(chat.id, "send-help").format("" if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with `/` or `!`.\n")))
-
-
+        send_help(chat.id, tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(
+            chat.id, "\nAll commands can either be used with `/` or `!`.\n"
+                )))
+        
+        
 def send_settings(chat_id, user_id, user=False):
     if user:
         if USER_SETTINGS:
