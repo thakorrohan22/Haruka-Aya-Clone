@@ -24,7 +24,7 @@ PM_START = """Hello {}, my name is {}!
 
 I'm here to help you manage your groups!. Need Any Help Join Our Support Group ( @MenheraChanSupport) 
 
-I'm a group manager bot maintained by this [sexy boi](https://t.me/TheDarkW3b) I'm built in python3, using the python-telegram-bot library.
+I'm a group manager bot maintained by this [sexy boi](https://t.me/freaksirr) I'm built in python3, using the python-telegram-bot library.
 
 Want to add me to your group? [Click here!](t.me/MenheraChanRoBot?startgroup=true)
 
