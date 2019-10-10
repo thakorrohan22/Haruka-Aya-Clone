@@ -18,3 +18,5 @@ I'll also help when a database schema changes, and some table column needs to be
 Join the [Tech channel](https://t.me/Dark_Hacker_X) For Free Knowledge.
 
 Alternatively, [find me on telegram](https://t.me/TheDarkW3b)! (Keep all support questions in the support chat, where more people can help you.)
+
+This Bot Is Made By [@TheDarkW3b](https://t.me/TheDarkW3b)
