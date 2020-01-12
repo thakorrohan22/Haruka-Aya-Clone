@@ -10,7 +10,8 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 
-from haruka import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \ ALLOW_EXCL
+from haruka import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \
+    ALLOW_EXCL
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from haruka.modules import ALL_MODULES
@@ -115,11 +116,11 @@ def start(bot: Bot, update: Update, args: List[str]):
 
         if is_user_admin(chat, update.effective_user.id):
                     send_settings(match.group(1), update.effective_user.id, user=False)
-                else:
-                    send_settings(match.group(1), update.effective_user.id, user=True)
-
-            elif args[0][1:].isdigit() and "rules" in IMPORTED:
-                IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
+        else:
+        	send_settings(match.group(1), update.effective_user.id, user=True)
+        
+        if args[0][1:].isdigit() and "rules" in IMPORTED:
+        	IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
             send_start(bot, update)
