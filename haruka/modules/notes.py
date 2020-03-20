@@ -232,7 +232,7 @@ def list_notes(bot: Bot, update: Update):
     note_list = sql.get_all_chat_notes(chat_id)
 
     for note in note_list:
-        note_name = " • `#{}`\n".format(note.name)
+        note_name = " • `{}`\n".format(note.name)
         if len(msg) + len(note_name) > MAX_MESSAGE_LENGTH:
             update.effective_message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
             msg = ""
