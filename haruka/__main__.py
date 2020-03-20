@@ -20,15 +20,18 @@ from haruka.modules.helper_funcs.misc import paginate_modules
 from haruka.modules.translations.strings import tld, tld_help 
 from haruka.modules.connection import connected
 
-PM_START = """Hello {}, my name is {}!
+PM_START = """Hello {}, My name is // FLASH //!
 
-I'm here to help you manage your groups!. Need Any Help Join Our Support Group ( @CuratorSCrew) 
+You know how hard it is sometimes to manage group so here is the solution for you
 
-I'm a group manager bot maintained by this [sexy boi](https://t.me/Divya_xd) I'm built in python3, using the python-telegram-bot library.
+I'm group Manager Bot 
 
-Want to add me to your group? [Click here!](t.me/shizuka_robot?startgroup=true)
+Made with love by @TODAYSHACKER
 
-Click (Help) button to find out more about how to use me to my full potential."""
+Join [FLASH BOT SUPPORT](https://t.me/flashbotsupport) If you need any Support or Help. 
+
+Click /help or Help button below to find out more about how to use me to my full potential.
+"""
 
 
 IMPORTED = {}
@@ -103,30 +106,35 @@ def test(bot: Bot, update: Update):
 
 @run_async
 def start(bot: Bot, update: Update, args: List[str]):
+    LOGGER.info("Start")
     chat = update.effective_chat  # type: Optional[Chat]
-    query = update.callback_query
+    #query = update.callback_query #Unused variable
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
-                send_help(update.effective_chat.id, tld(chat.id, "send-help").format(""if not ALLOW_EXCL else tld(chat.id, "\nAll commands can either be used with `/` or `!`.\n")))
+                send_help(update.effective_chat.id, tld(chat.id, "send-help").format(
+                     dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(
+                         chat.id, "\nAll commands can either be used with `/` or `!`.\n"
+                             )))
 
             elif args[0].lower().startswith("stngs_"):
                 match = re.match("stngs_(.*)", args[0].lower())
+                chat = dispatcher.bot.getChat(match.group(1))
 
+                if is_user_admin(chat, update.effective_user.id):
+                    send_settings(match.group(1), update.effective_user.id, update, user=False)
+                else:
+                    send_settings(match.group(1), update.effective_user.id, update, user=True)
 
-        if is_user_admin(chat, update.effective_user.id):
-                    send_settings(match.group(1), update.effective_user.id, user=False)
-        else:
-        	send_settings(match.group(1), update.effective_user.id, user=True)
-        
-        if args[0][1:].isdigit() and "rules" in IMPORTED:
-        	IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
+            elif args[0][1:].isdigit() and "rules" in IMPORTED:
+                IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
+            elif args[0].lower() == "controlpanel":
+                control_panel(bot, update)
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Hoi! I'm Alive :-)")
-
+        update.effective_message.reply_text("I'm alive")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -140,9 +148,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START
 
-
-    keyboard = [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
+    keyboard = [[InlineKeyboardButton(text="🇮🇳 Language", callback_data="set_lang_")]]
+    keyboard += [[InlineKeyboardButton(text="🛠 Reporting", callback_data="cntrl_panel_M"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(PM_START.format(escape_markdown(first_name), bot.first_name), reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
@@ -174,7 +181,7 @@ def control_panel(bot, update):
 
         LOGGER.info(query.data)
     else:
-        M_match = "MenheraChan is the best bot" #LMAO, don't uncomment
+        M_match = "ThaNos is the best bot" #LMAO, don't uncomment
 
     if M_match:
         text = "*Control panel* 🛠"
@@ -405,8 +412,7 @@ def get_help(bot: Bot, update: Update):
         send_help(chat.id, tld(chat.id, "send-help").format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else tld(
             chat.id, "\nAll commands can either be used with `/` or `!`.\n"
                 )))
-        
-        
+
 def send_settings(chat_id, user_id, user=False):
     if user:
         if USER_SETTINGS:
