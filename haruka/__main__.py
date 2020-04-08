@@ -20,13 +20,15 @@ from haruka.modules.helper_funcs.misc import paginate_modules
 from haruka.modules.translations.strings import tld, tld_help 
 from haruka.modules.connection import connected
 
-PM_START = """Hello {}, My Name is {}!
+PM_START = """Hey there! My name is {} - I'm here to help you manage your groups!
 
-You know how hard it is sometimes to manage group so here is the solution for you
+Click Help button to find out more about how to use me to my full potential.
 
-I'm group manager bot 🃏
+Join Haruka Aya Group http://t.me/spiderbotsupport) ( @SPIDERBOTSUPPORT ) if you need any support or help.
 
-Click /help or Help button below to find out more about how to use me to my full potential.
+Made with love by @Hackerz_xD
+
+Want to add me to your group? Click here! (http://t.me/SpiderMan_ProBot?startgroup=true)
 """
 
 
