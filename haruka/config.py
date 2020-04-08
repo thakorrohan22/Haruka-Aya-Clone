@@ -11,8 +11,8 @@ class Config(object):
 
     # REQUIRED
     API_KEY = ""
-    OWNER_ID = "686021814"  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = "TheDarkW3b"
+    OWNER_ID = "1116223246"  # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_USERNAME = "CRAZYHAX"
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = ''  # needed for any database modules
@@ -20,7 +20,7 @@ class Config(object):
     LOAD = []
     NO_LOAD = ['translation', 'sed']
     WEBHOOK = ANYTHING
-    URL = "https://menherachanrobot.herokuapp.com/"
+    URL = "https://itsflashbot.herokuapp.com"
 
     # OPTIONAL
     SUDO_USERS = []  # List of id's (not usernames) for users which have sudo access to the bot.
