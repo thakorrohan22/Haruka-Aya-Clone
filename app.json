@@ -1,5 +1,5 @@
 {
-  "name": "MenheraChan",
+  "name": "Haruka Aya Clone",
   "description": "Telegram's Best group manager. Modular Telegram group management bot!",
   "keywords": [
     "telegram",
@@ -8,7 +8,7 @@
     "manager",
     "3"
   ],
-  "repository": "https://github.com/ramitgangwar/husg28882hsh",
+  "repository": "https://github.com/technicalhackerz/Haruka-Aya-Clone",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable env variables",
@@ -20,11 +20,11 @@
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "686021814"
+      "value": "1116223246"
     },
     "OWNER_USERNAME": {
       "description": "Your username",
-      "value": "TheDarkW3b"
+      "value": "CRAZYHAX"
     },
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode messages",
