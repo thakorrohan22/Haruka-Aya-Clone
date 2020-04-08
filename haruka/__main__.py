@@ -26,7 +26,7 @@ Click Help button to find out more about how to use me to my full potential.
 
 Join Haruka Aya Group [Spider Man Bot Support](http://t.me/spiderbotsupport) ( @SPIDERBOTSUPPORT ) if you need any support or help.
 
-Made with love by @Hackerz_xD
+Made with love by [Hackerz_xD](http://t.me/Hackerz_xD)
 
 Want to add me to your group? Click here! [Click Here](http://t.me/SpiderMan_ProBot?startgroup=true)
 """
