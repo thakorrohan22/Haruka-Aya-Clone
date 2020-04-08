@@ -26,7 +26,7 @@ You know how hard it is sometimes to manage group so here is the solution for yo
 
 I'm group Manager Bot 
 
-Made with love by {OWNER_USERNAME}
+Made with love by my Owner. 
 
 Click /help or Help button below to find out more about how to use me to my full potential.
 """
