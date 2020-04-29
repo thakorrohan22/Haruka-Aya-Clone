@@ -8,7 +8,7 @@ from telegram.ext import run_async, CommandHandler, MessageHandler, Filters
 from telegram.utils.helpers import mention_html
 
 import haruka.modules.sql.antispam_sql as sql
-from haruka import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_ANTISPAM, sw
+from haruka import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, STRICT_ANTISPAM
 from haruka.modules.helper_funcs.chat_status import user_admin, is_user_admin
 from haruka.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from haruka.modules.helper_funcs.filters import CustomFilters
@@ -230,26 +230,10 @@ def gbanlist(bot: Bot, update: Update):
 
 
 def check_and_ban(update, user_id, should_message=True):
-    chat = update.effective_chat
-    message = update.effective_message
-    try:
-        if sw != None:
-            sw_ban = sw.get_ban(user_id)
-            if sw_ban:
-                spamwatch_reason = sw_ban.reason
-                chat.kick_member(user_id)
-                if should_message:
-                    message.reply_text(chat.id, "<b>This user is detected as a spambot by SpamWatch and has been removed!</b>\n\n<b>Reason</b>: {}".format(spamwatch_reason), parse_mode=ParseMode.HTML)
-                    return
-                else:
-                    return
-    except Exception:
-        pass
-    
     if sql.is_user_gbanned(user_id):
-        chat.kick_member(user_id)
+        update.effective_chat.kick_member(user_id)
         if should_message:
-            message.reply_text("This user is banned in Anti-Spam Security\n*Bans them from here*")
+            update.effective_message.reply_text("Again, insects, you ask what am I? What I am is angry. What I am is insane with rage!")
 
 #GMUTE
 
