@@ -20,11 +20,15 @@ from haruka.modules.helper_funcs.misc import paginate_modules
 from haruka.modules.translations.strings import tld, tld_help 
 from haruka.modules.connection import connected
 
-PM_START = """Hey there! My name is {} - I'm here to help you manage your groups I Can Manage Your Groups With My Amazing Features 😍!
+PM_START = """Hey there! My name is {} - I'm here to help you manage your groups!
 
-Click /Help button to find out more about how to use me to my full potential.
+Click Help button to find out more about how to use me to my full potential.
 
-Want to add me to your group? Click here! [Click Here](http://t.me/nancymomoland_PRobot?startgroup=true)
+Join Haruka Aya Group [Spider Man Bot Support](http://t.me/spiderbotsupport) ( @SPIDERBOTSUPPORT ) if you need any support or help.
+
+Made with love by [Hackerz_xD](http://t.me/Hackerz_xD)
+
+Want to add me to your group? Click here! [Click Here](http://t.me/SpiderMan_ProBot?startgroup=true)
 """
 
 
@@ -128,7 +132,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Hey There Spider Is Alive😎")
+        update.effective_message.reply_text("I'm alive")
 
 def send_start(bot, update):
     #Try to remove old message
