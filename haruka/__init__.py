@@ -1,7 +1,7 @@
 import logging
 import os
 import sys
-
+import spamwatch
 import telegram.ext as tg
 
 print("haruka")
@@ -61,6 +61,7 @@ if ENV:
     BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADEAgAAgi3GQL9YQyT_kBpQwI')
     ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
     API_WEATHER = os.environ.get('API_OPENWEATHER', None)
+    SW_API = os.environ.get('SW_API', None)
 
 else:
     from haruka.config import Development as Config
@@ -103,9 +104,20 @@ else:
     BAN_STICKER = Config.BAN_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
     API_WEATHER = Config.API_OPENWEATHER
-
+    SW_API = Config.SW_API
 
 SUDO_USERS.add(OWNER_ID)
+
+# SpamWatch
+spamwatch_api = Config.SW_API
+if spamwatch_api == "None":
+    sw = None
+    LOGGER.warning("SpamWatch API key is missing! Check your config.env.")
+else:
+    try:
+        sw = spamwatch.Client(spamwatch_api)
+    except:
+        sw = None
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
