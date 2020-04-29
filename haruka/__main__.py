@@ -24,7 +24,6 @@ PM_START = """Hey there! My name is {} - I'm here to help you manage your groups
 
 Click Help button to find out more about how to use me to my full potential.
 
-Join My Support Group [Nancy MomoLand Support Group](http://t.me/nancy_Momoland_support_group) if you need any support or help.
 
 Want to add me to your group? Click here! [Click Here](http://t.me/nancymomoland_PRobot?startgroup=true)
 """
