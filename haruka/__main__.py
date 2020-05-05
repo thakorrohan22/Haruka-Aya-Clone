@@ -24,9 +24,9 @@ PM_START = """Hey there! My name is {} - I'm here to help you manage your groups
 
 Click Help button to find out more about how to use me to my full potential.
 
-Join Haruka Aya Group [Spider Man Bot Support](http://t.me/spiderbotsupport) ( @SPIDERBOTSUPPORT ) if you need any support or help.
+Join My Support Group [Nancy Momoland Bot Support](http://t.me/Nancy_Momoland_support_group) if you need any support or help.
 
-Made with love by [Hackerz_xD](http://t.me/Hackerz_xD)
+Don't Forget To CheckOut [SpiderMan](http://t.me/Spiderman_ProBot) 
 
 Want to add me to your group? Click here! [Click Here](http://t.me/SpiderMan_ProBot?startgroup=true)
 """
